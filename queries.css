@@ -201,4 +201,8 @@
     justify-self: center;
     grid-row: 2;
   }
+
+  .footer-logo {
+    width: 50%;
+  }
 }
