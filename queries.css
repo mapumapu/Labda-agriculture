@@ -70,6 +70,10 @@
     min-height: 90rem;
   }
 
+  .crossfade > figure {
+    min-height: 90rem;
+  }
+
   .section-product {
     padding-top: 6.4rem;
   }
@@ -146,6 +150,10 @@
     min-height: 80rem;
   }
 
+  .crossfade > figure {
+    min-height: 80rem;
+  }
+
   .hero-title {
     font-size: 4.4rem;
   }
@@ -200,9 +208,5 @@
   .featured-img:nth-child(1) {
     justify-self: center;
     grid-row: 2;
-  }
-
-  .footer-logo {
-    width: 50%;
   }
 }

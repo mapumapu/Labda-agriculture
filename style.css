@@ -34,6 +34,8 @@ body {
   padding: 0 8rem;
   width: 100%;
   position: absolute;
+  /* background-color: transparent; */
+  z-index: 9999;
 }
 
 .logo {
@@ -84,24 +86,105 @@ body {
   display: none;
 }
 
+/* CAROUSEL */
+.crossfade > figure {
+  animation: imageAnimation 20s linear infinite 0s;
+  backface-visibility: hidden;
+  background-size: cover;
+  background-position: center center;
+  color: transparent;
+  min-height: 100rem;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 0;
+}
+
+.crossfade > figure:nth-child(1) {
+  background: linear-gradient(
+      to right,
+      rgba(51, 51, 51, 0.747),
+      rgba(51, 51, 51, 0.329)
+    ),
+    url("img/bawang-slide1.webp");
+  background-size: cover;
+  background-position: center center;
+}
+.crossfade > figure:nth-child(2) {
+  animation-delay: 4s;
+  background: linear-gradient(
+      to right,
+      rgba(51, 51, 51, 0.747),
+      rgba(51, 51, 51, 0.329)
+    ),
+    url("img/bawang-slide2.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+.crossfade > figure:nth-child(3) {
+  animation-delay: 8s;
+  background: linear-gradient(
+      to right,
+      rgba(51, 51, 51, 0.747),
+      rgba(51, 51, 51, 0.329)
+    ),
+    url("img/bawang-slide3.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+.crossfade > figure:nth-child(4) {
+  animation-delay: 12s;
+  background: linear-gradient(
+      to right,
+      rgba(51, 51, 51, 0.747),
+      rgba(51, 51, 51, 0.329)
+    ),
+    url("img/bawang-slide4.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+.crossfade > figure:nth-child(5) {
+  animation-delay: 16s;
+  background: linear-gradient(
+      to right,
+      rgba(51, 51, 51, 0.747),
+      rgba(51, 51, 51, 0.329)
+    ),
+    url("img/bawang-slide5.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+@keyframes imageAnimation {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  8% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* CAROUSEL */
+
 /* HERO SECTION */
 
 .section-hero {
-  /* background-image: ; */
-  /* background: linear-gradient(
-    to right,
-    rgba(51, 51, 51, 0.924),
-    rgba(51, 51, 51, 0)
-  ); */
-  /* background: linear-gradient(
-      to right,
-      rgba(51, 51, 51, 0.924),
-      rgba(51, 51, 51, 0)
-    ),
-    url(img/bawang-mirror.webp); */
   background-size: cover;
   min-height: 100rem;
   display: flex;
+  background-color: #333;
 }
 
 .hero-text-box {
@@ -109,14 +192,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  /* align-items: center; */
-  /* row-gap: 2.4rem; */
-  /* flex-direction: row; */
-  background: linear-gradient(
-    to right,
-    rgba(51, 51, 51, 0.747),
-    rgba(51, 51, 51, 0.329)
-  );
+  z-index: 999;
 }
 
 .hero-container {
@@ -131,6 +207,8 @@ body {
 .hero-title {
   font-size: 6.2rem;
   line-height: 1.1;
+  font-weight: 700;
+  color: #f7f2f4;
 }
 
 .hero-description {
